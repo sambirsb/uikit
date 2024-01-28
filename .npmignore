@@ -2,3 +2,5 @@
 .github
 src
 vite.config.ts
+tsconfig.json
+rollup.config.js
