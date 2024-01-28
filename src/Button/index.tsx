@@ -4,7 +4,7 @@ interface Props {
     children: ReactNode
 }
 
-export const Button: FC<Props> = ({ children }) => {
+export const Button: FC<Props> = ({ children = 'Button' }) => {
 
     const [count] = useState(1)
 
