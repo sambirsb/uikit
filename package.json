@@ -9,8 +9,8 @@
     "test:dev": "vitest",
     "test": "vitest run",
     "build": "tsc",
-    "ci": "pnpm test && pnpm build",
-    "release": "pnpm test && pnpm build && changeset publish"
+    "ci": "yarn test && yarn build",
+    "release": "yarn test && yarn build && changeset publish"
   },
   "keywords": [],
   "author": "Bohdan Shathret",
