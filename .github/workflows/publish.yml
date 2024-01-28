@@ -1,4 +1,5 @@
 name: Publish
+
 on:
   push:
     branches:
@@ -12,24 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        with:
-          version: 8
-          run_install: false
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+
+      - name: Install Node.js and Yarn
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: pnpm
+          cache: yarn
           registry-url: https://registry.npmjs.org
 
-      - run: pnpm install --frozen-lockfile
+      - run: yarn install --frozen-lockfile
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run release
+          publish: yarn run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
