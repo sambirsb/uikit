@@ -8,7 +8,7 @@
   "scripts": {
     "test:dev": "vitest",
     "test": "vitest run",
-    "build": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "ci": "yarn test && yarn build",
     "release": "yarn test && yarn build && changeset publish"
   },
@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   }
