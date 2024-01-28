@@ -1,21 +1,14 @@
 {
   "name": "@sambirsb/uikit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My own ui library for pet projects",
-  "private": false,
-  "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "scripts": {
     "test:dev": "vitest",
     "test": "vitest run",
-    "build": "tsup",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "ci": "yarn build",
     "release": "yarn build && changeset publish"
   },
@@ -24,14 +17,12 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@types/react": "^18.2.48",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "dependencies": {
-    "@types/react": "^18.2.48"
   }
 }
