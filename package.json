@@ -1,16 +1,23 @@
 {
-  "name": "sambirsb-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@sambirsb/uikit",
+  "version": "0.0.1",
+  "description": "My own ui library for pet projects",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "test:dev": "vitest",
+    "test": "vitest run",
+    "build": "tsc",
+    "ci": "pnpm test && pnpm build",
+    "release": "pnpm test && pnpm build && changeset publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bohdan Shathret",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "@changesets/cli": "^2.27.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
   }
 }

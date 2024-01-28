@@ -1,1 +1,3 @@
-export const isString = (param:any) => typeof param === 'string'
+const isString = (param:any) => typeof param === 'string'
+
+export default isString
