@@ -6,9 +6,9 @@ interface Props {
 
 export const Button: FC<Props> = ({ children = 'Button' }) => {
 
-    const [count] = useState(1)
+    const [count, setCount] = useState(1)
 
-    return <button>
+    return <button onClick={() => setCount((p) => p+1)}>
         {count}
         {children}
     </button>
