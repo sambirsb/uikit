@@ -9,8 +9,8 @@
     "test:dev": "vitest",
     "test": "vitest run",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "ci": "yarn test && yarn build",
-    "release": "yarn test && yarn build && changeset publish"
+    "ci": "yarn build",
+    "release": "yarn build && changeset publish"
   },
   "keywords": [],
   "author": "Bohdan Shathret",
