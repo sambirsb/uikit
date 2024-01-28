@@ -4,3 +4,6 @@ src
 vite.config.ts
 tsconfig.json
 rollup.config.js
+.nvmrc
+CHANGELOG.md
+tsup.config.ts
