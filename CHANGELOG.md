@@ -1,11 +1,5 @@
 # @sambirsb/uikit
 
-## 0.0.2
-
-### Patch Changes
-
-- 70152cd: dependencies fixes
-
 ## 0.0.4
 
 ### Patch Changes
@@ -22,4 +16,4 @@
 
 ### Patch Changes
 
-- ee2be0c: initial commit
+- 70152cd: dependencies fixes
