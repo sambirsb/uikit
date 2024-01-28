@@ -2,6 +2,7 @@
   "name": "@sambirsb/uikit",
   "version": "0.0.2",
   "description": "My own ui library for pet projects",
+  "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
