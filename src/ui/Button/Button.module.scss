@@ -1,0 +1,131 @@
+@import '../../styles/variables.scss';
+
+.main {
+    border-radius: $point;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: min-content;
+    @include flexHorizontalSpace(2);
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.wide {
+    width: 100%;
+}
+
+// Sizes
+
+.large {
+    padding: 3 * $point 4 * $point;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+}
+
+.medium {
+    padding: 2 * $point 3 * $point;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.small {
+    padding: 1 * $point 3 * $point;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+// Colors
+
+.primary {
+    background-color: $colorIndigo500;
+    color: $colorWhite;
+
+    path {
+        fill: $colorWhite;
+    }
+
+    &:hover {
+        background-color: $colorIndigo600;
+        color: $colorWhite;
+    }
+
+    &:focus {
+        background-color: $colorIndigo600;
+        color: $colorWhite;
+        outline: 2px solid #1E3A8A;
+    }
+
+    &:active {
+        background-color: $colorIndigo500;
+        color: $colorWhite;
+    }
+
+    &:disabled {
+        cursor: default;
+        outline: 1px solid $colorGray200;
+        background-color: $colorGray100;
+        color: $colorGray400;
+    }
+}
+
+.secondary {
+    background-color: transparent;
+    color: $colorIndigo500;
+    outline: 1px solid $colorGray200;
+
+    path {
+        fill: $colorIndigo500;
+    }
+
+    &:hover {
+        background-color: $colorIndigo50;
+        color: $colorIndigo500;
+    }
+
+    &:focus {
+        background-color: transparent;
+        color: $colorIndigo500;
+        outline: 2px solid $colorBlue900;
+    }
+
+    &:active {
+        background-color: transparent;
+        color: $colorIndigo500;
+        outline: 1px solid $colorGray200;
+    }
+
+    &:disabled {
+        path {
+            fill: $colorGray400;
+        }
+
+        cursor: default;
+        background-color: transparent;
+        color: $colorGray400;
+        outline: none;
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.loading {
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
