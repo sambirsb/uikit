@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.0.9
+
+### Patch Changes
+
+- e4a32a5: exports fix
+
 ## 0.0.8
 
 ### Patch Changes
