@@ -10,8 +10,8 @@
     "test:dev": "vitest",
     "test": "vitest run",
     "build": "rollup -c",
-    "ci": "yarn build",
-    "release": "yarn build && changeset publish"
+    "ci": "yarn build && yarn build",
+    "release": "yarn build && yarn build && changeset publish"
   },
   "keywords": [],
   "author": "Bohdan Shathret",
