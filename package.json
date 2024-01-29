@@ -10,11 +10,14 @@
     "test:dev": "vitest",
     "test": "vitest run",
     "build": "rollup -c",
-    "ci": "yarn build && yarn build",
-    "release": "yarn build && yarn build && changeset publish"
+    "ci": "yarn test && yarn build",
+    "release": "yarn test && yarn build && changeset publish"
+  },
+  "exports": {
+    ".": "./dist/index.js"
   },
   "keywords": [],
-  "author": "Bohdan Shathret",
+  "author": "Bohdan Shtanhret",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
