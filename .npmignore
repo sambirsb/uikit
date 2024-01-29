@@ -1,9 +1,11 @@
 .changeset
 .github
 src
+declaration.d.ts
+yarn.lock
 vite.config.ts
 tsconfig.json
 rollup.config.js
 .nvmrc
 CHANGELOG.md
-tsup.config.ts
+tests-config.js

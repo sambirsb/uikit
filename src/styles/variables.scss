@@ -1,0 +1,112 @@
+// COLORS
+
+$shadow: rgba(0, 0, 0, 0.3);
+
+$colorIndigo50: #EEF2FF;
+$colorIndigo100: #E0E7FF;
+$colorIndigo200: #C7D2FE;
+$colorIndigo300: #A5B4FC;
+$colorIndigo400: #818CF8;
+$colorIndigo500: #6366F1;
+$colorIndigo600: #4F46E5;
+$colorIndigo700: #4338CA;
+$colorIndigo800: #3730A3;
+$colorIndigo900: #312E81;
+
+
+$colorGray50: #F8FAFC;
+$colorGray100: #F1F5F9;
+$colorGray200: #E2E8F0;
+$colorGray300: #CBD5E1;
+$colorGray400: #94A3B8;
+$colorGray500: #64748B;
+$colorGray600: #475569;
+$colorGray700: #334155;
+$colorGray800: #1E293B;
+$colorGray900: #0F172A;
+
+
+$colorLightBlue50: #F0F9FF;
+$colorLightBlue100: #E0F2FE;
+$colorLightBlue200: #BAE6FD;
+$colorLightBlue300: #7DD3FC;
+$colorLightBlue400: #38BDF8;
+$colorLightBlue500: #0EA5E9;
+$colorLightBlue600: #0284C7;
+$colorLightBlue700: #0369A1;
+$colorLightBlue800: #075985;
+$colorLightBlue900: #0C4A6E;
+
+
+$colorBlue50: #EFF6FF;
+$colorBlue100: #DBEAFE;
+$colorBlue200: #BFDBFE;
+$colorBlue300: #93C5FD;
+$colorBlue400: #60A5FA;
+$colorBlue500: #3B82F6;
+$colorBlue600: #2563EB;
+$colorBlue700: #1D4ED8;
+$colorBlue800: #1E40AF;
+$colorBlue900: #1E3A8A;
+
+
+$colorGreen50: #ECFDF5;
+$colorGreen100: #D1FAE5;
+$colorGreen200: #A7F3D0;
+$colorGreen300: #6EE7B7;
+$colorGreen400: #34D399;
+$colorGreen500: #10B981;
+$colorGreen600: #059669;
+$colorGreen700: #047857;
+$colorGreen800: #065F46;
+$colorGreen900: #064E3B;
+
+
+$colorRed50: #FFF1F2;
+$colorRed100: #FFE4E6;
+$colorRed200: #FECDD3;
+$colorRed300: #FDA4AF;
+$colorRed400: #FB7185;
+$colorRed500: #F43F5E;
+$colorRed600: #E11D48;
+$colorRed700: #BE123C;
+$colorRed800: #9F1239;
+$colorRed900: #881337;
+
+
+$colorAmber50: #FFFBEB;
+$colorAmber100: #FEF3C7;
+$colorAmber200: #FDE68A;
+$colorAmber300: #FCD34D;
+$colorAmber400: #FBBF24;
+$colorAmber500: #F59E0B;
+$colorAmber600: #D97706;
+$colorAmber700: #B45309;
+$colorAmber800: #92400E;
+$colorAmber900: #78350F;
+
+$colorWhite: #fff;
+
+// ELSE
+
+$point: 4px;
+$smallTransition: all 0.3s ease-in-out;
+
+// MIXINS
+
+@mixin ui($property, $count) {
+    #{$property}: $count * $point;
+}
+
+@mixin flexVerticalSpace($count) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $count * $point;
+}
+
+@mixin flexHorizontalSpace($count) {
+    display: flex;
+    align-items: center;
+    gap: $count * $point;
+}

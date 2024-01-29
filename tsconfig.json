@@ -5,12 +5,11 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "declaration": true,
-    "declarationDir": "dist/dts",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
-  "include": [ "src/**/*.ts", "src/**/*.tsx", "types.d.ts"],
-  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+  "include": [ "src/**/*.ts", "src/**/*.tsx", "declaration.d.ts", "@testing-library/jest-dom/vitest"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"]
 }
