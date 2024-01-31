@@ -2,10 +2,13 @@
   "name": "@sambirsb/uikit",
   "version": "0.0.4",
   "description": "My own ui library for pet projects",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test:dev": "vitest",
     "test": "vitest run",
@@ -14,11 +17,8 @@
     "release": "yarn test && yarn build && changeset publish"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+    ".": "./dist/index.js",
+    "./*": null
   },
   "keywords": [],
   "author": "Bohdan Shtanhret",
@@ -31,6 +31,7 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.2.48",
+    "cssnano": "^6.0.3",
     "jsdom": "^24.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
