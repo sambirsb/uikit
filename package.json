@@ -1,24 +1,28 @@
 {
   "name": "@sambirsb/uikit",
-  "version": "0.0.9",
+  "version": "0.1.9",
   "description": "My own ui library for pet projects",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test:dev": "vitest",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test:watch": "vitest",
     "test": "vitest run",
-    "build": "rollup -c",
+    "build": "yarn lint:fix && yarn test && rollup -c",
+    "build:watch": "yarn lint:fix && yarn test && rollup -c -w",
     "ci": "yarn test && yarn build",
     "release": "yarn test && yarn build && changeset publish"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+    ".": "./dist/index.js",
+    "./types": "./dist/types.d.ts",
+    "./*": null
   },
   "keywords": [],
   "author": "Bohdan Shtanhret",
@@ -31,6 +35,11 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "cssnano": "^6.0.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "jsdom": "^24.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",

@@ -10,14 +10,13 @@ export const sleep = (ms: number) => {
 
 export const simpler = (obj:any) => JSON.parse(JSON.stringify(obj))
 
-export const isEven = (number: number) => {
-    return number % 2 === 0
-}
+
+export const isSomeTrulable = (obj:object) => Object.values(obj).some((item) => !!item)
 
 export const cutTimeFromDate = (date: Date):Date => {
-    const year1 = date.getFullYear()
-    const month1 = date.getMonth()
-    const day1 = date.getDate()
+	const year1 = date.getFullYear()
+	const month1 = date.getMonth()
+	const day1 = date.getDate()
 
-    return new Date(year1, month1, day1)
+	return new Date(year1, month1, day1)
 }

@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.main {
+    width: 60 * $point;
+
+    label {
+        width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: $point;
+        display: block;
+
+        span {
+            color: $colorRed500;
+        }
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 2 * $point 3 * $point;
+        background-color: $colorWhite;
+        outline: 1px solid $colorGray200;
+        border-radius: $point;
+        font-size: 14px;
+        box-shadow: 0 1px 2px 0 rgba(15,23,42,.04);
+        color: $colorGray800;
+        border: none;
+
+        &:focus {
+            outline: 1px solid $colorIndigo300;
+        }
+    }
+}
+
+.error {
+    label {
+        color: $colorRed500;
+    }
+
+    input {
+        outline: 1px solid $colorRed500;
+    }
+}
+
+.wide {
+    display: block;
+    width: 100%;
+}
