@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.2
+
+### Patch Changes
+
+- f00887e: seprate exports
+
 ## 0.2.0
 
 ### Minor Changes
