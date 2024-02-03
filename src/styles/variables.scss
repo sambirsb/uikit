@@ -1,6 +1,6 @@
 // COLORS
 
-$shadow: rgba(0, 0, 0, 0.3);
+$shadow: rgba(0, 0, 0, 0.1);
 
 $colorIndigo50: #EEF2FF;
 $colorIndigo100: #E0E7FF;
@@ -101,12 +101,10 @@ $smallTransition: all 0.3s ease-in-out;
 @mixin flexVerticalSpace($count) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: $count * $point;
 }
 
 @mixin flexHorizontalSpace($count) {
     display: flex;
-    align-items: center;
     gap: $count * $point;
 }

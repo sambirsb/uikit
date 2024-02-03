@@ -53,25 +53,26 @@
 
     &:hover {
         background-color: $colorIndigo600;
-        color: $colorWhite;
     }
 
     &:focus {
         background-color: $colorIndigo600;
-        color: $colorWhite;
         outline: 2px solid #1E3A8A;
     }
 
     &:active {
         background-color: $colorIndigo500;
-        color: $colorWhite;
     }
 
     &:disabled {
         cursor: default;
-        outline: 1px solid $colorGray200;
-        background-color: $colorGray100;
+        outline: none;
+        background-color: $colorWhite;
         color: $colorGray400;
+
+        path {
+            fill: $colorGray400;
+        }
     }
 }
 
@@ -115,17 +116,4 @@
 
 .reverse {
     flex-direction: row-reverse;
-}
-
-.loading {
-    animation: rotate 1s infinite;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
