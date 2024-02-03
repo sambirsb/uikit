@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.0
+
+### Minor Changes
+
+- 8cf10f6: basic components and linter added
+
 ## 0.0.9
 
 ### Patch Changes
