@@ -1,6 +1,6 @@
 {
   "name": "@sambirsb/uikit",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "My own ui library for pet projects",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
