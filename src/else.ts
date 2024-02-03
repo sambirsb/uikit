@@ -1,0 +1,1 @@
+export { icons as Icons } from './config/consts'
