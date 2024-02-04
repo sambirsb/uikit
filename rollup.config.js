@@ -4,15 +4,11 @@ import typescript from 'rollup-plugin-typescript2'
 import postcss from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
 import cssnano from 'cssnano'
+import terser from '@rollup/plugin-terser'
 
 export default {
 	input: 'src/index.ts',
 	output: [
-		{
-			file: 'dist/index.cjs',
-			format: 'cjs',
-			sourcemap: false
-		},
 		{
 			file: 'dist/index.js',
 			format: 'esm',
@@ -29,6 +25,9 @@ export default {
 			plugins: [
 				cssnano(),
 			],
+		}),
+		terser({
+			compress: false,
 		})
 	]
 }
