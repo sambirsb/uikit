@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.5
+
+### Patch Changes
+
+- c634863: imports fix
+
 ## 0.2.4
 
 ### Patch Changes
