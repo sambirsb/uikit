@@ -2,4 +2,4 @@
 "@sambirsb/uikit": patch
 ---
 
-Just changes
+seprate exports
