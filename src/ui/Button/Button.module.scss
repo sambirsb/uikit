@@ -11,6 +11,11 @@
     text-decoration: none;
     align-items: center;
     white-space: nowrap;
+
+    svg {
+        width: 4 * $point;
+        height: 4 * $point;
+    }
 }
 
 .wide {

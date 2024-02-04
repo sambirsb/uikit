@@ -107,7 +107,7 @@ export const icons = {
 	'loading': <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" className={s.loading}>
 		<circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="16" strokeDashoffset="3"/>
 	</svg>,
-	'x': <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" id="loadingCross">
+	'x': <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
 		<line x1="1" y1="1" x2="15" y2="15" stroke="currentColor" strokeWidth="2" />
 		<line x1="1" y1="15" x2="15" y2="1" stroke="currentColor" strokeWidth="2" />
 	</svg>

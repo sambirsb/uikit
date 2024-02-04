@@ -21,9 +21,16 @@
     border: none;
     outline: none;
     background-color: transparent;
+    cursor: pointer;
 
-    path {
-        fill: $colorGray500;
+    svg {
+        width: 3 * $point;
+        height: 3 * $point;
+        display: block;
+    
+        path {
+            fill: $colorGray500;
+        }
     }
 }
 
