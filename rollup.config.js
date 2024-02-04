@@ -6,7 +6,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import cssnano from 'cssnano'
 import terser from '@rollup/plugin-terser'
 
-export default {
+export default [{
 	input: 'src/index.ts',
 	output: [
 		{
@@ -27,7 +27,31 @@ export default {
 			],
 		}),
 		terser({
-			compress: false,
+			compress: false
 		})
 	]
-}
+}, {
+	input: 'src/utils.ts',
+	output: [
+		{
+			file: 'dist/utils.js',
+			format: 'esm',
+			sourcemap: false
+		}
+	],
+	treeshake: true,
+	plugins: [
+		peerDepsExternal(),
+		resolve(),
+		typescript({ tsconfig: './tsconfig.json' }),
+		commonjs(),
+		postcss({
+			plugins: [
+				cssnano(),
+			],
+		}),
+		terser({
+			compress: false
+		})
+	]
+}]

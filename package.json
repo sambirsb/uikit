@@ -22,7 +22,7 @@
   "exports": {
     ".": "./dist/index.js",
     "./types": "./dist/types.d.ts",
-    "./utils": "./dist/utils.d.ts",
+    "./utils": "./dist/utils.js",
     "./else": "./dist/else.d.ts",
     "./*": null
   },
