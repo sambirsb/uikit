@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.4
+
+### Patch Changes
+
+- 2247efd: build update
+
 ## 0.2.2
 
 ### Patch Changes
