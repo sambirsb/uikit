@@ -14,51 +14,40 @@
     "lint:fix": "eslint --fix",
     "test:watch": "vitest",
     "test": "vitest run",
-    "build": "yarn lint:fix && yarn lint:fix && yarn test && rollup -c",
-    "build:watch": "yarn lint:fix && yarn lint:fix && yarn test && rollup -c -w",
+    "build": "yarn lint:fix && yarn lint:fix && yarn test && yarn compile && yarn build:scss && yarn replace",
     "ci": "yarn build",
-    "release": "yarn build && changeset publish"
+    "release": "yarn build && changeset publish",
+    "compile": "tsc",
+    "build:scss": "node-sass src -o dist",
+    "replace": "node ./replacer.js"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./types": "./dist/types.d.ts",
-    "./utils": "./dist/utils.js",
-    "./else": "./dist/else.d.ts",
-    "./*": null
+    ".": "./dist/index.js"
   },
   "keywords": [],
   "author": "Bohdan Shtanhret",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
     "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.2.48",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
-    "cssnano": "^6.0.3",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "jsdom": "^24.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^4.9.6",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
+    "replace-in-file": "^7.1.0",
     "sass": "^1.70.0",
-    "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "dependencies": {}
+  }
 }
