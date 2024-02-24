@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "declaration": true,
     "jsx": "react-jsx",
+    "outDir": "dist"
   },
   "include": [ "src/**/*.ts", "src/**/*.tsx", "declaration.d.ts", "@testing-library/jest-dom/vitest"],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"]
