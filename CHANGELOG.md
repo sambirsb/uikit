@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.6
+
+### Patch Changes
+
+- 747468b: Builder update
+
 ## 0.2.5
 
 ### Patch Changes
