@@ -1,0 +1,75 @@
+@import '../../styles/variables.scss';
+
+.container {
+    position: fixed;
+    width: 100 * $point;
+    right: 10 * $point;
+    bottom: 5 * $point;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.main {
+    padding: 3 * $point;
+    border-radius: $point;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100 * $point;
+    margin-bottom: 3 * $point;
+    transition: 0.5s all ease-in-out;
+    animation: slideRight 0.5s ease 1;
+
+        @keyframes slideRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-$point * 10);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+    &.hidden {
+        opacity: 0;
+        transform: translateX($point * 10);
+    }
+
+    svg {
+        display: block;
+        height: 3 * $point;
+        width: 3 * $point;
+
+        path, line {
+            fill: $gray0;
+            stroke: $gray0;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none
+    }
+}
+
+.texts {
+    @include flexHorizontalSpace(1);
+    color: white;
+}
+
+.success {
+    background-color: $success50;
+}
+
+.error {
+    background-color: $error50;
+}
+
+.warning {
+    background-color: $warning50;
+}
+
+.info {
+    background-color: $primary50;
+}

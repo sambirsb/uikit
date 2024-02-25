@@ -1,110 +1,72 @@
-// COLORS
-
-$shadow: rgba(0, 0, 0, 0.1);
-
-$colorIndigo50: #EEF2FF;
-$colorIndigo100: #E0E7FF;
-$colorIndigo200: #C7D2FE;
-$colorIndigo300: #A5B4FC;
-$colorIndigo400: #818CF8;
-$colorIndigo500: #6366F1;
-$colorIndigo600: #4F46E5;
-$colorIndigo700: #4338CA;
-$colorIndigo800: #3730A3;
-$colorIndigo900: #312E81;
-
-
-$colorGray50: #F8FAFC;
-$colorGray100: #F1F5F9;
-$colorGray200: #E2E8F0;
-$colorGray300: #CBD5E1;
-$colorGray400: #94A3B8;
-$colorGray500: #64748B;
-$colorGray600: #475569;
-$colorGray700: #334155;
-$colorGray800: #1E293B;
-$colorGray900: #0F172A;
-
-
-$colorLightBlue50: #F0F9FF;
-$colorLightBlue100: #E0F2FE;
-$colorLightBlue200: #BAE6FD;
-$colorLightBlue300: #7DD3FC;
-$colorLightBlue400: #38BDF8;
-$colorLightBlue500: #0EA5E9;
-$colorLightBlue600: #0284C7;
-$colorLightBlue700: #0369A1;
-$colorLightBlue800: #075985;
-$colorLightBlue900: #0C4A6E;
-
-
-$colorBlue50: #EFF6FF;
-$colorBlue100: #DBEAFE;
-$colorBlue200: #BFDBFE;
-$colorBlue300: #93C5FD;
-$colorBlue400: #60A5FA;
-$colorBlue500: #3B82F6;
-$colorBlue600: #2563EB;
-$colorBlue700: #1D4ED8;
-$colorBlue800: #1E40AF;
-$colorBlue900: #1E3A8A;
-
-
-$colorGreen50: #ECFDF5;
-$colorGreen100: #D1FAE5;
-$colorGreen200: #A7F3D0;
-$colorGreen300: #6EE7B7;
-$colorGreen400: #34D399;
-$colorGreen500: #10B981;
-$colorGreen600: #059669;
-$colorGreen700: #047857;
-$colorGreen800: #065F46;
-$colorGreen900: #064E3B;
-
-
-$colorRed50: #FFF1F2;
-$colorRed100: #FFE4E6;
-$colorRed200: #FECDD3;
-$colorRed300: #FDA4AF;
-$colorRed400: #FB7185;
-$colorRed500: #F43F5E;
-$colorRed600: #E11D48;
-$colorRed700: #BE123C;
-$colorRed800: #9F1239;
-$colorRed900: #881337;
-
-
-$colorAmber50: #FFFBEB;
-$colorAmber100: #FEF3C7;
-$colorAmber200: #FDE68A;
-$colorAmber300: #FCD34D;
-$colorAmber400: #FBBF24;
-$colorAmber500: #F59E0B;
-$colorAmber600: #D97706;
-$colorAmber700: #B45309;
-$colorAmber800: #92400E;
-$colorAmber900: #78350F;
-
-$colorWhite: #fff;
-
-// ELSE
-
 $point: 4px;
-$smallTransition: all 0.3s ease-in-out;
 
-// MIXINS
+$primary10: var(--primary10);
+$primary20: var(--primary20);
+$primary30: var(--primary30);
+$primary40: var(--primary40);
+$primary50: var(--primary50);
+$primary60: var(--primary60);
+$primary70: var(--primary70);
+$primary80: var(--primary80);
+$primary90: var(--primary90);
+$primary100: var(--primary100);
+
+$success10: var(--success10);
+$success20: var(--success20);
+$success30: var(--success30);
+$success40: var(--success40);
+$success50: var(--success50);
+$success60: var(--success60);
+$success70: var(--success70);
+$success80: var(--success80);
+$success90: var(--success90);
+$success100: var(--success100);
+
+$warning10: var(--warning10);
+$warning20: var(--warning20);
+$warning30: var(--warning30);
+$warning40: var(--warning40);
+$warning50: var(--warning50);
+$warning60: var(--warning60);
+$warning70: var(--warning70);
+$warning80: var(--warning80);
+$warning90: var(--warning90);
+$warning100: var(--warning100);
+
+$error10: var(--error10);
+$error20: var(--error20);
+$error30: var(--error30);
+$error40: var(--error40);
+$error50: var(--error50);
+$error60: var(--error60);
+$error70: var(--error70);
+$error80: var(--error80);
+$error90: var(--error90);
+$error100: var(--error100);
+
+$gray0: var(--gray0);
+$gray10: var(--gray10);
+$gray20: var(--gray20);
+$gray30: var(--gray30);
+$gray40: var(--gray40);
+$gray50: var(--gray50);
+$gray60: var(--gray60);
+$gray70: var(--gray70);
+$gray80: var(--gray80);
+$gray90: var(--gray90);
+$gray100: var(--gray100);
 
 @mixin ui($property, $count) {
-    #{$property}: $count * $point;
+    #{$property}: calc(#{$count} * #{$point});
 }
 
 @mixin flexVerticalSpace($count) {
     display: flex;
     flex-direction: column;
-    gap: $count * $point;
+    gap: calc(#{$count} * #{$point});
 }
 
 @mixin flexHorizontalSpace($count) {
     display: flex;
-    gap: $count * $point;
+    gap: calc(#{$count} * #{$point});
 }
