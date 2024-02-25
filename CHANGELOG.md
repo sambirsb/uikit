@@ -1,5 +1,11 @@
 # @sambirsb/uikit
 
+## 0.2.7
+
+### Patch Changes
+
+- ae37924: Text and Alert components
+
 ## 0.2.6
 
 ### Patch Changes
