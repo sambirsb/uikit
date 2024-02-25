@@ -7,7 +7,7 @@
     transform: translate(-50%, -50%);
     max-height: 80vh;
     overflow-x: scroll;
-    background-color: $colorIndigo50;
+    background-color: $primary10;
     border-radius: 3 * $point;
     padding: 8 * $point;
     min-width: 100 * $point;
@@ -29,7 +29,7 @@
         display: block;
     
         path {
-            fill: $colorGray500;
+            fill: $gray50;
         }
     }
 }

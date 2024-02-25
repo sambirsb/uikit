@@ -22,7 +22,13 @@
     "replace": "node ./replacer.js"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./utils": "./dist/utils.js",
+    "./types": "./dist/types.js",
+    "./else": "./dist/else.js",
+    "./providers": "./dist/providers.js",
+    "./global.css": "./dist/styles/global.css",
+    "./defaultVars.css": "./dist/styles/defaultVars.css"
   },
   "keywords": [],
   "author": "Bohdan Shtanhret",
@@ -44,10 +50,12 @@
     "replace-in-file": "^7.1.0",
     "sass": "^1.70.0",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "zustand": "^4.5.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.1"
   }
 }

@@ -15,6 +15,7 @@ export interface Props {
     onClick?: MouseEventHandler<HTMLButtonElement>
     type?: 'button' | 'submit' | 'reset'
     isLoading?: boolean
+	className?: string
 }
 
 const variants: Record<ButtonVariantsType, string> = {
@@ -26,9 +27,9 @@ const variants: Record<ButtonVariantsType, string> = {
 	'secondary-icon': classnames(s.secondary, s.reverse)
 }
 
-const Button: FC<Props> = ({ size, variant, children, wide = false, disabled, isLoading, onClick, type = 'button', icon }) => {
+const Button: FC<Props> = ({ size, variant, children, wide = false, disabled, isLoading, onClick, type = 'button', icon, className }) => {
 	return (
-		<button onClick={!isLoading && onClick} type={type} disabled={isLoading || disabled} className={classnames(s.main, s[size], variants[variant], wide && s.wide)} data-testid='button'>
+		<button onClick={!isLoading && onClick} type={type} disabled={isLoading || disabled} className={classnames(s.main, s[size], variants[variant], wide && s.wide, className)} data-testid='button'>
 			{variant.includes('icon') && !isLoading && icons[icon]}
 			{isLoading && icons['loading']}
 			{children}

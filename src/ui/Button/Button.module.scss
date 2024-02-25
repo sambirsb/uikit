@@ -13,8 +13,8 @@
     white-space: nowrap;
 
     svg {
-        width: 4 * $point;
-        height: 4 * $point;
+        width: $point * 4;
+        height: $point * 4;
     }
 }
 
@@ -25,7 +25,7 @@
 // Sizes
 
 .large {
-    padding: 3 * $point 4 * $point;
+    padding: $point * 3 $point * 4;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -33,14 +33,14 @@
 }
 
 .medium {
-    padding: 2 * $point 3 * $point;
+    padding: $point * 2 $point * 3;
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
 }
 
 .small {
-    padding: 1 * $point 3 * $point;
+    padding: $point $point * 3;
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
@@ -49,72 +49,78 @@
 // Colors
 
 .primary {
-    background-color: $colorIndigo500;
-    color: $colorWhite;
+    background-color: $primary60;
+    color: $gray10;
 
     path {
-        fill: $colorWhite;
+        fill: $gray10;
     }
 
     &:hover {
-        background-color: $colorIndigo600;
+        background-color: $primary50;
     }
 
     &:focus {
-        background-color: $colorIndigo600;
-        outline: 2px solid #1E3A8A;
+        background-color: $primary50;
+        outline: 2px solid $primary90;
     }
 
     &:active {
-        background-color: $colorIndigo500;
+        background-color: $primary60;
     }
 
     &:disabled {
         cursor: default;
         outline: none;
-        background-color: $colorWhite;
-        color: $colorGray400;
+        background-color: $gray10;
+        color: $gray40;
 
         path {
-            fill: $colorGray400;
+            fill: $gray40;
         }
     }
 }
 
 .secondary {
     background-color: transparent;
-    color: $colorIndigo500;
-    outline: 1px solid $colorGray200;
+    color: $primary40;
+    outline: 1px solid $gray20;
 
     path {
-        fill: $colorIndigo500;
+        fill: $primary40;
     }
 
     &:hover {
-        background-color: $colorIndigo50;
-        color: $colorIndigo500;
+        background-color: $primary10;
+
+        color: $primary50;
+        outline: 1px solid $gray20;
+
+        path {
+            fill: $primary50;
+        }
     }
 
     &:focus {
         background-color: transparent;
-        color: $colorIndigo500;
-        outline: 2px solid $colorBlue900;
+        color: $primary50;
+        outline: 2px solid $primary90;
     }
 
     &:active {
         background-color: transparent;
-        color: $colorIndigo500;
-        outline: 1px solid $colorGray200;
+        color: $primary50;
+        outline: 1px solid $gray20;
     }
 
     &:disabled {
         path {
-            fill: $colorGray400;
+            fill: $gray40;
         }
 
         cursor: default;
         background-color: transparent;
-        color: $colorGray400;
+        color: $gray40;
         outline: none;
     }
 }
